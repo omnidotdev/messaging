@@ -1,0 +1,26 @@
+{
+  "name": "@omnidotdev/messaging",
+  "version": "0.1.0",
+  "description": "Shared, transport-agnostic 1:1 messaging core for the Omni ecosystem. App-specific authorization, moderation, monetization, encryption, and delivery are injected, so the core stays neutral across SFW and adult, centralized and federated.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts"
+    }
+  },
+  "files": ["build"],
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./build --target node && tsc",
+    "test": "bun test src",
+    "check": "biome check src"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  }
+}

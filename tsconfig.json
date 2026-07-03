@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "build",
+    "emitDeclarationOnly": true,
+    "rootDir": "src",
+    "outDir": "build",
+    "resolveJsonModule": true,
+    "erasableSyntaxOnly": true,
+    "types": ["@types/bun"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["build", "node_modules", "test"]
+}

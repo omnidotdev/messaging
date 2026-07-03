@@ -20,6 +20,7 @@
   "files": ["build"],
   "scripts": {
     "build": "bun build ./src/index.ts ./src/schema.ts --outdir ./build --target node && tsc",
+    "prepare": "bun run build",
     "test": "bun test src",
     "check": "biome check src"
   },

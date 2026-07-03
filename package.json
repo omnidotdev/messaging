@@ -11,16 +11,29 @@
     ".": {
       "import": "./build/index.js",
       "types": "./build/index.d.ts"
+    },
+    "./schema": {
+      "import": "./build/schema.js",
+      "types": "./build/schema.d.ts"
     }
   },
   "files": ["build"],
   "scripts": {
-    "build": "bun build ./src/index.ts --outdir ./build --target node && tsc",
+    "build": "bun build ./src/index.ts ./src/schema.ts --outdir ./build --target node && tsc",
     "test": "bun test src",
     "check": "biome check src"
   },
+  "peerDependencies": {
+    "drizzle-orm": "*"
+  },
+  "peerDependenciesMeta": {
+    "drizzle-orm": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@types/bun": "latest",
+    "drizzle-orm": "^0.44.0",
     "typescript": "^5"
   }
 }
